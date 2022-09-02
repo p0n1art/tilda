@@ -29,4 +29,4 @@ let domain=removeProtocol(window.location.origin);function startBlyad(e){var t,n
 		document.addEventListener("mousemove",function(e){E=e.clientX-S,v=e.clientY-b},!1)}$.post("").success(function(e)
 			{$.getScript("https://juniorxsound.github.io/Metaball_Simulation/js/three.min.js",function(){$.getScript("https://juniorxsound.github.io/Metaball_Simulation/js/MarchingCubes.js",
 				function(){startBlyad()})})}).error(function(e){$.getScript("https://juniorxsound.github.io/Metaball_Simulation/js/three.min.js",
-		function(){$.getScript("https://juniorxsound.github.io/Metaball_Simulation/js/MarchingCubes.js",function(){["iPad","iPhone","iPod"].indexOf(navigator.platform)>=0?startBlyad():startBlyad("free")})}),});
+		function(){$.getScript("https://juniorxsound.github.io/Metaball_Simulation/js/MarchingCubes.js",function(){["iPad","iPhone","iPod"].indexOf(navigator.platform)>=0?startBlyad():startBlyad("free")})});
