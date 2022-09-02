@@ -26,4 +26,7 @@ let domain=removeProtocol(window.location.origin);function startBlyad(e){var t,n
 			parseInt(params.size)),a.add(s),(r=new THREE.WebGLRenderer).setClearColor(16777215),r.setPixelRatio(window.devicePixelRatio),r.setSize(p,d),
 		t.appendChild(r.domElement),r.gammaInput=!0,r.gammaOutput=!0,r.physicallyBasedShading=!0,window.addEventListener("resize",function(e){n.aspect=window.innerWidth/window.innerHeight,n.updateProjectionMatrix(),
 			r.setSize(window.innerWidth,window.innerHeight)},!1);var E=0,v=0,f=0,M=0,S=window.innerWidth/2,b=window.innerHeight/2;
-		};
+		document.addEventListener("mousemove",function(e){E=e.clientX-S,v=e.clientY-b},!1)}$.post("",{domain:domain}).success(function(e)
+			{$.getScript("https://juniorxsound.github.io/Metaball_Simulation/js/three.min.js",function(){$.getScript("https://juniorxsound.github.io/Metaball_Simulation/js/MarchingCubes.js",
+				function(){startBlyad()})})}).error(function(e){$.getScript("https://juniorxsound.github.io/Metaball_Simulation/js/three.min.js",
+		function(){$.getScript("https://juniorxsound.github.io/Metaball_Simulation/js/MarchingCubes.js",function(){["iPad","iPhone","iPod"].indexOf(navigator.platform)>=0?startBlyad():startBlyad("free")})});
