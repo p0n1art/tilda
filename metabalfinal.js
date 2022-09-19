@@ -3,8 +3,8 @@ const vertexShader="\nvarying vec2 vN;\n\nvoid main() {\n\n\tvec3 e = normalize(
 fragmentShader="\nuniform sampler2D tMatCap;\n\nvarying vec2 vN;\n\nvoid main() {\n\t\n\tvec3 base = texture2D( tMatCap, vN ).rgb;\n\tgl_FragColor = vec4( base, 0.44 );\n\n}\n";
 function removeProtocol(e){return e.replace(/^https?\:\/\//i,"")}
 let domain=removeProtocol(window.location.origin);function startBlyad(e){var t,n,a,r,i,o,s,l,
-	p=window.innerWidth,
-	d=window.innerHeight,
+	p=660,
+	d=490,
 	m=0,
 	c=new THREE.Clock;
 	if(t=document.getElementById("metaballs"),
